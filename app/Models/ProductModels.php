@@ -16,6 +16,9 @@ class ProductModels extends Model{
         return $this->insert($data);
     }
 
+   
+    
+
     
 
 }
