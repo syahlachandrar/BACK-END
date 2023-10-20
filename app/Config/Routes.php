@@ -13,3 +13,9 @@ $routes->get('editproduct/(:any)', 'ProductControl::getProduct/$1');
 $routes->post('update-product/(:any)', 'ProductControl::updateProduct/$1');
 $routes->get('deleteproduct/(:any)', 'ProductControl::deleteProduct/$1');
 
+
+$routes->group('api',function ($routes) {
+    $routes->get('product', 'ProductControl::readProductApi');
+    $routes->get('product/(:any)', 'ProductControl::getProductApi/$1');
+
+});
