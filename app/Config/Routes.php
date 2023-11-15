@@ -17,5 +17,7 @@ $routes->get('deleteproduct/(:any)', 'ProductControl::deleteProduct/$1');
 $routes->group('api',function ($routes) {
     $routes->get('product', 'ProductControl::readProductApi');
     $routes->get('product/(:any)', 'ProductControl::getProductApi/$1');
-
+    $routes->post('insertProduct', 'ProductControl::insertProductApi');
+    $routes->put('update-product-api/(:num)', 'ProductController::updateProductApi/$1');
+    $routes->delete('delete-product-api/(:num)', 'ProductController::deleteProductApi/$1');
 });
